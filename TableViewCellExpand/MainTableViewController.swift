@@ -13,7 +13,8 @@ class MainTableViewController: UITableViewController {
     // MARK: - Properties
     var source = [String]()
     var detailSource = [String]()
-    var selectedIndexPath = IndexPath()
+    var selectedRowIndex = -1
+    var expandedIndexPath = IndexPath.init(row: -1, section: -1)
 
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -22,7 +23,6 @@ class MainTableViewController: UITableViewController {
         loadContent()
 
     }
-
     
     // MARK: - Application Data Source
     private func loadContent(){
@@ -54,26 +54,40 @@ class MainTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return source.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = source[indexPath.row]
-        return cell
+        if selectedRowIndex != indexPath.row {
+            // normal cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellNormal", for: indexPath) as? CellNormalTableViewCell
+            cell?.normalTitle.text = source[indexPath.row]
+            return cell!
+
+        }else{
+            // expanded cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CellExpanded", for: indexPath) as? CellExpandedTableViewCell
+            cell?.expandedTitle.text = source[indexPath.row]
+            cell?.expandedSubtitle.text = detailSource[indexPath.row]
+            return cell!
+        }
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-            selectedIndexPath = indexPath
-            tableView.beginUpdates()
-            tableView.endUpdates()
+        if selectedRowIndex == indexPath.row {
+            selectedRowIndex = -1
+        } else {
+            selectedRowIndex = indexPath.row
+        }
+        tableView.reloadData()
 
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath == selectedIndexPath {
+        
+        if indexPath.row == selectedRowIndex {
             return 140
         }
         return 44
+
     }
 }

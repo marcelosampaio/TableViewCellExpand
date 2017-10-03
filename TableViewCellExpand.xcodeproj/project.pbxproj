@@ -12,6 +12,8 @@
 		82974D901F839AF100C5DFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82974D8F1F839AF100C5DFBD /* Assets.xcassets */; };
 		82974D931F839AF100C5DFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82974D911F839AF100C5DFBD /* LaunchScreen.storyboard */; };
 		82974D9B1F839B4A00C5DFBD /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82974D9A1F839B4A00C5DFBD /* MainTableViewController.swift */; };
+		82974D9D1F83B3BC00C5DFBD /* CellNormalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82974D9C1F83B3BC00C5DFBD /* CellNormalTableViewCell.swift */; };
+		82974D9F1F83B3D000C5DFBD /* CellExpandedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82974D9E1F83B3D000C5DFBD /* CellExpandedTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		82974D921F839AF100C5DFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82974D941F839AF100C5DFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82974D9A1F839B4A00C5DFBD /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		82974D9C1F83B3BC00C5DFBD /* CellNormalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellNormalTableViewCell.swift; sourceTree = "<group>"; };
+		82974D9E1F83B3D000C5DFBD /* CellExpandedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellExpandedTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				82974D911F839AF100C5DFBD /* LaunchScreen.storyboard */,
 				82974D941F839AF100C5DFBD /* Info.plist */,
 				82974D9A1F839B4A00C5DFBD /* MainTableViewController.swift */,
+				82974D9C1F83B3BC00C5DFBD /* CellNormalTableViewCell.swift */,
+				82974D9E1F83B3D000C5DFBD /* CellExpandedTableViewCell.swift */,
 			);
 			path = TableViewCellExpand;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82974D9B1F839B4A00C5DFBD /* MainTableViewController.swift in Sources */,
+				82974D9D1F83B3BC00C5DFBD /* CellNormalTableViewCell.swift in Sources */,
+				82974D9F1F83B3D000C5DFBD /* CellExpandedTableViewCell.swift in Sources */,
 				82974D891F839AF100C5DFBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U294U2N56;
 				INFOPLIST_FILE = TableViewCellExpand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.TableViewCellExpand;
@@ -289,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5U294U2N56;
 				INFOPLIST_FILE = TableViewCellExpand/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = MAS.TableViewCellExpand;
