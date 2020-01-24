@@ -41,6 +41,10 @@ class MainTableViewController: UITableViewController {
         detailSource.append("Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda. Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda.Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda.")
         detailSource.append("Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda. Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda.Anashdg hhhs jajahsgyk jasj sashh haggsja khasdjhas khaghs hgasgdas jashsdgj qwye nbbaanaba. Tiahsjad kajjhlhjda.")
         
+        
+        tableView.reloadData()
+        
+        
     }
     
 
